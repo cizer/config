@@ -6,9 +6,8 @@ if test ! $(which brew); then
   echo "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
-brew update; brew upgrade
+brew update
 brew bundle install
-brew prune; brew cleanup; brew doctor
 
 # SDKMAN
 if [ ! -d "$HOME/.sdkman" ]; then
@@ -17,13 +16,12 @@ if [ ! -d "$HOME/.sdkman" ]; then
 fi
 
 # nvm/node
-# if [ ! -d "$HOME/.nvm" ]; then
+if [ ! -d "$HOME/.nvm" ]; then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
   [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
   nvm install $NODE_VERSION
   nvm use $NODE_VERSION
-# fi
+fi
 
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
-code --install-extension peterjausovec.vscode-docker
