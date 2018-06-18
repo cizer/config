@@ -25,3 +25,6 @@ fi
 
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
+
+hyper i hyper-pane
+hyper i hyperline
