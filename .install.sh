@@ -28,6 +28,4 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension xabikos.javascriptsnippets
 code --install-extension izdt.javascript-unit-test-snippet
 code --install-extension peterjausovec.vscode-docker
-
-hyper i hyper-pane
-hyper i hyperline
+code --install-extension dsznajder.es7-react-js-snippets
